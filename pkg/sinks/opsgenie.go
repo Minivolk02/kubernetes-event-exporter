@@ -17,6 +17,12 @@ type OpsgenieConfig struct {
 	Tags        []string          `yaml:"tags"`
 	Details     map[string]string `yaml:"details"`
 	Entity      string            `yaml:"entity"`
+	Responders []Responder       `yaml:"responders"`
+}
+
+type Responder struct {
+	Id   string
+	Type string
 }
 
 type OpsgenieSink struct {
